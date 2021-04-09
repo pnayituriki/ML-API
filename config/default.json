@@ -10,5 +10,8 @@
             "id": "1",
             "name": "audio_1.mp4"
         }
-    ]
+    ],
+    "VIDEO_PATH": "upload/video/",
+    "AUDIO_PATH": "upload/audio/",
+    "BOOK_PATH": "upload/book/"
 }

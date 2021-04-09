@@ -1,6 +1,6 @@
 const express = require('express');
-const path = require('path');
 const router = express.Router();
+const config = require('config');
 const utils = require('../utils');
 
 /**
@@ -19,7 +19,7 @@ router.get('/:id', (req, res) => {
     }
 
     const videoName = `video_${req.params.id}.mp4`;
-    const videoFile = process.env.VIDEO_PATH + videoName;
+    const videoFile = config.get('VIDEO_PATH') + videoName;
     const file = {
         range: null,
         name: videoName,

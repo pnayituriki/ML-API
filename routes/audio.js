@@ -1,6 +1,6 @@
 const express = require('express');
-const path = require('path');
 const router = express.Router();
+const config = require('config');
 const utils = require('../utils');
 
 /**
@@ -19,7 +19,7 @@ router.get('/:id', (req, res) => {
         return;
     }
     const audioName = `audio_${req.params.id}.mp3`;
-    const audioFile = process.env.AUDIO_PATH + audioName;
+    const audioFile = config.get('AUDIO_PATH') + audioName;
     const file = {
         range: null,
         name: audioName,
