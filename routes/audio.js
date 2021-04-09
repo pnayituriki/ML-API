@@ -10,7 +10,8 @@ const utils = require('../utils');
  */
 
 router.get('/', (req, res) => {
-    res.sendFile('audio.html', { root: path.join(__dirname, '../view') });
+    // res.sendFile('audio.html', { root: path.join(__dirname, '../views') });
+    res.render('audio');
 });
 
 router.get('/:id', (req, res) => {

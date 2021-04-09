@@ -10,7 +10,7 @@ const utils = require('../utils');
  */
 
 router.get('/', (req, res) => {
-    res.sendFile('video.html', { root: path.join(__dirname, '../view') });
+    res.render('video');
 });
 
 router.get('/:id', (req, res) => {
